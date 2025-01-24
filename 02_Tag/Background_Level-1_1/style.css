@@ -1,0 +1,11 @@
+section {
+    background-color: linen;
+}
+
+h1 {
+    background-color: lightblue;
+}
+
+article {
+    background: url("https://picsum.photos/200/300");
+}

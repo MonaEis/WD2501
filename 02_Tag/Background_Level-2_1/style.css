@@ -1,0 +1,12 @@
+section{
+    background: url("./assets/Holzwand.avif");
+    background-size: contain;
+    background-repeat: repeat-x;
+}
+
+article {
+    background: url("./assets/Fenster.avif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}

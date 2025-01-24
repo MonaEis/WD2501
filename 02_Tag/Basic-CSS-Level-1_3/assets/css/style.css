@@ -1,0 +1,43 @@
+body {
+    background-color: azure;
+}
+
+nav {
+    background-color: bisque;
+    
+}
+
+nav a{
+    display: block;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+article a {
+    color: orange;
+    text-decoration: none;
+}
+
+span {
+    color: red;
+}
+
+img {
+    display: block;
+    margin-bottom: 20px;
+}
+
+#bild1 {
+    height: 400px;
+    width: 400px;
+}
+
+#bild2 {
+    height: 600px;
+    width: 600px;
+}
+
+#bild3 {
+    height: 600px;
+    width: 800px;
+}
