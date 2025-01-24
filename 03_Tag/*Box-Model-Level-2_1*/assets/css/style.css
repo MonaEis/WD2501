@@ -51,9 +51,7 @@ h2 {
 h3 {
     text-align: center;
     border-radius: 20px;
-    border: thick double green; 
-    /* border: 2px green; */
-    width: 10vw;
-    line-height: 3rem;
-    line-height: 2.5em;
+    border: 15px double green; 
+    width: 200px;
+    padding: 10px;
 }
