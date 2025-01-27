@@ -1,0 +1,119 @@
+@font-face {
+    font-family: "MavenPro_var";
+    src: url("../font/Maven_Pro/MavenPro-VariableFont_wght.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-family: "MavenPro_var";
+}
+
+html {
+    font-size: 10px;
+    font-family: var(--font-family);
+    scroll-behavior: smooth;
+}
+
+nav {
+    margin-bottom: 2vh;
+}
+
+nav a {
+    display: block;
+    text-align: right;
+    /* background-color: beige; */
+    padding: 10rem 12rem 3rem 0 ;
+    font-family: var(--font-family);
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+section {
+    width: 80vw;
+    margin: 0 auto 5rem auto;
+    background-size: cover;
+    object-fit: cover;
+    height: 30rem;
+}
+
+p {
+    font-size: 2rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    line-height: 2rem;
+}
+
+section.birds {
+    background-image: url("../img/wolke9.png");
+}
+
+section.birds p {
+    color: white;
+    text-align: right;
+    padding: 10rem 10rem 0 0;
+}
+
+section.birds p span {
+    color: orange;
+}
+
+section.schaefchen {
+    background-image: url("../img/wolke1.png");
+}
+
+section.schaefchen p {
+    color: black;
+    text-align: left;
+    padding: 10rem 0 0 10rem;
+}
+
+section.schaefchen p span {
+    font-weight: bold;
+}
+
+section.strahl {
+    background-image: url("../img/wolke2.png");
+}
+
+section.strahl p {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 10rem;
+}
+
+section.pink {
+    background-image: url("../img/wolke4.png");
+    padding: 5rem 0 0 5rem;
+}
+
+section.pink h3 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    line-height: 1.6rem;
+}
+
+section.pink h3:nth-of-type(2) {
+    margin-bottom: 6rem;
+    color: white;
+}
+
+section.pink p {
+    color: #9175A5;
+}
+
+
+footer p a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-family: var(--font-family);
+    font-weight: 100;
+    font-size: 2rem;
+    padding-bottom: 10rem;
+    }
