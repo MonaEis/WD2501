@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Forms Level 2_3</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Register form</legend>
+
+      <form>
+        <label class="left" for="name">Name</label>
+        <input type="text" iclass="left" d="name" />
+        <label class="left" for="surname">Surname</label>
+        <input type="text" id="surname" />
+        <label class="left" for="mail">Email</label>
+        <input type="email" id="mail" />
+
+        <div>
+          <label class="left">Gender</label>
+          <label class="right" for="male" name="Gender">Male</label>
+          <input
+            class="right"
+            type="radio"
+            name="Gender"
+            id="male"
+            value="Male"
+          />
+          <label class="right" for="female" name="Gender">Female</label>
+          <input
+            class="right"
+            type="radio"
+            name="Gender"
+            id="female"
+            value="Male"
+          />
+        </div>
+
+        <label class="left" for="picture">Picture</label>
+        <input type="file" id="picture" />
+
+        <label class="left" for="country">Country</label>
+        <select class="right" id="country">
+          <option value="Germany">Germany</option>
+          <option value="France">France</option>
+          <option value="USA">USA</option>
+        </select>
+
+        <br />
+        <label class="left hoeher" for="languages">Preferred languages</label>
+        <select multiple="multiple" id="languages">
+          <option value="HTML">HTML</option>
+          <option value="CSS" selected="selected">CSS</option>
+          <option value="JS">JS</option>
+          <option value="React">React</option>
+        </select>
+        <p class="right">(To choose more than one use cmd key)</p>
+
+        <label class="left">Fieled of activity</label>
+        <input type="checkbox" id="IT" />
+        <label class="right" for="IT">IT</label>
+        <input type="checkbox" id="IT" />
+        <label class="right" for="Design">Design</label>
+        <input type="checkbox" id="IT" />
+        <label class="right" for="Other">Other</label>
+        <div>
+          <input type="button" value="Send" />
+          <input type="button" value="Cancel" />
+        </div>
+      </form>
+    </fieldset>
+  </body>
+</html>

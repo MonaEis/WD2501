@@ -1,0 +1,31 @@
+form {
+    width: 500px;
+    background-color: beige;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+label.left {
+    display: inline-block;
+    width: 140px;
+    margin-right: 20px;
+}
+
+label.right {
+    margin-right: 5px;
+    /* width: 300px; */
+    display: inline-block;
+}
+
+input.right {
+    margin-right: 30px;
+}
+p {
+    display: inline;
+}
+
+.hoeher {
+    vertical-align: 30px;
+}
