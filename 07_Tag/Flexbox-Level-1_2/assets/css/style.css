@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-image: url("./img/mos-sukjaroenkraisri-W1utIKY7-e8-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+/* .wrapper {
+    padding: 0px 50px;
+} */
+
+article {
+    background-color: rgba(47, 47, 47, 0.467);
+    display: flex;
+    justify-content:space-between;
+    padding: 0  4%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: antiquewhite;
+}
+
+h3 {
+    font-size: clamp(2rem, 2vw, 3rem);
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 2vh 0;
+}
+
+
+ul {
+    /* background-color: blueviolet; */
+    list-style: none;
+    font-size: 2rem;
+    display: flex;
+    gap: 3vw;
+    align-items: center;
+    padding-right: 4% ;
+}

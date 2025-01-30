@@ -1,0 +1,124 @@
+@font-face {
+    font-family: "Raleway_Var";
+    src: url("../font/Raleway/Raleway-VariableFont_wght.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: "Raleway_Var";
+}
+
+header {
+    position: fixed; 
+    width: 100%;
+    top: 0;
+}
+
+nav {
+    background-color: white;
+    color: #666666;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10vw;
+    position: sticky;
+}
+
+h3 {
+    font-weight: 300;
+    font-size: clamp(2rem, 2.5vw, 3rem);
+    padding-left: 2vw;
+    padding-right: 1vw;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    align-items: center;
+    padding-right: 7vw;
+}
+
+ul a {
+    text-decoration: none;
+    color: #666666;
+    text-transform: uppercase;
+    font-size: clamp(.8rem, 1vw, 1.3rem);
+    font-weight: 500;
+
+}
+
+a:hover{
+    color: rgb(14, 193, 193);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    /* padding: 39vh 0;  */
+    align-items: center;
+    background-color: rgba(137, 43, 226, 0.368);
+    color: white;
+    background-image: url("../img/header_background_image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+article div h2 {
+    font-size: clamp(4rem, 5vw, 6rem);
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+article div p {
+    font-size: clamp(1rem, 1.2vw, 1.4rem);
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+article div.buttons {
+    /* background-color: aquamarine; */
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+article .buttons a {
+    /* background-color: chartreuse; */
+    width: 200px;
+    /* height: 54px; */
+    padding: 20px 0;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    color: white;
+}
+
+/*! Text will nicht mittig */
+
+.buttons a.violet {
+    background-color: #745CF9;
+}
+
+.buttons a.violet:hover {
+    background-color: #5644ba;
+}
+
+.buttons a.white {
+    border: 2px solid white;
+}
+
+.buttons a.white:hover {
+    background-color: white;
+    color: #666666;
+}
