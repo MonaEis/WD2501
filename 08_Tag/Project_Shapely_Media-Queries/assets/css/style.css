@@ -1,0 +1,413 @@
+@font-face {
+    font-family: "Raleway_Var";
+    src: url("../font/Raleway/Raleway-VariableFont_wght.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+html {
+    font-size: 10px;
+    font-family: "Raleway_Var";
+}
+
+p {
+    font-size: clamp(1rem, 1.2vw, 1.4rem);
+    font-weight: 300;
+    line-height: 2.4rem;
+}
+
+h4 {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+/* ! Header */
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    display: none;
+}
+
+.burger div {
+    height: 3px;
+    width: 20px;
+    background-color: rgb(25, 32, 218);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+nav {
+    background-color: white;
+    color: #666666;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10vw;
+    position: sticky;
+}
+
+h3 {
+    font-weight: 300;
+    font-size: clamp(2rem, 2.5vw, 3rem);
+    padding-left: 2vw;
+    padding-right: 1vw;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    align-items: center;
+    padding-right: 7vw;
+}
+
+ul a {
+    text-decoration: none;
+    color: #666666;
+    text-transform: uppercase;
+    font-size: clamp(0.8rem, 1vw, 1.3rem);
+    font-weight: 500;
+}
+
+ul a:hover {
+    color: rgb(25, 32, 218);
+}
+
+section.s_header {
+    display: flex;
+    justify-content: center;
+    /* padding: 39vh 0;  */
+    align-items: center;
+    background-color: rgba(137, 43, 226, 0.368);
+    color: white;
+    background-image: url("../img/header_background_image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+article div h2 {
+    font-size: clamp(4rem, 5vw, 6rem);
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+article div p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+article div.buttons {
+    /* background-color: aquamarine; */
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+a {
+    /* background-color: chartreuse; */
+    width: 150px;
+    /* height: 54px; */
+    padding: 20px 0;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    color: white;
+}
+
+a.violet {
+    background-color: #745cf9;
+}
+
+a.violet:hover {
+    background-color: #5644ba;
+}
+
+a.white {
+    border: 2px solid white;
+}
+
+a.white:hover {
+    background-color: white;
+    color: #666666;
+}
+
+/* ! Main */
+
+.product {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    padding: 3vw 6vw;
+    margin: auto;
+}
+
+.product img, .product div {
+    width: 50%;
+}
+
+.product div {
+    display: flex;
+    flex-direction: column;
+}
+.product div h4 {
+    margin-bottom: 15px;
+}
+
+.product img {
+    object-fit: contain;
+    max-width: 1300px;
+}
+
+.product div p {
+    margin-bottom: 15px;
+}
+
+.grau {
+    background-color: #F5F5F5;
+}
+
+/* ! Parallax */
+
+.para {
+    background: url("../img/parallax.jpeg") no-repeat center /cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 0 6vw;
+
+    color: white;
+
+    background-attachment: fixed;
+}
+
+.para article {
+    padding: 10vh 0;
+}
+
+.para div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ! Limitless */
+
+.limit {
+    display: flex;
+    flex-direction: column;
+
+    padding: 30px 6vw 0 6vw;
+}
+
+.limit div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.limit h4 {
+    margin-bottom: 15px;
+}
+
+.limit p {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.limit a {
+    margin-bottom: 15px;
+}
+
+.berge img {
+    object-fit: cover;
+    display: block;
+    
+}
+
+/* ! Gallerie */
+
+.gallery {
+    background-color: #0E1015;
+    color: white;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 60px 0;
+}
+
+.gallery_t h4 {
+    margin-bottom: 15px;
+}
+
+.gallery_t p {
+    margin-bottom: 15px;
+}
+
+.bild_15{
+    background-image: url("../img/gallery_1.png");
+}
+
+.bild_14{
+    background-image: url("../img/gallery_2.png");
+}
+
+.bild_13{
+    background-image: url("../img/gallery_3.png");
+}
+
+.bild_12{
+    background-image: url("../img/gallery_4.png");
+}
+
+.bild_11{
+    background-image: url("../img/gallery_5.png");
+}
+
+.bild_10{
+    background-image: url("../img/gallery_6.png");
+}
+
+.bild_9{
+    background-image: url("../img/gallery_7.png");
+}
+
+.bild_8{
+    background-image: url("../img/gallery_8.png");
+}
+
+.bild_7{
+    background-image: url("../img/gallery_9.png");
+}
+
+.bild_6{
+    background-image: url("../img/gallery_10.png");
+}
+
+.bilder_gal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0  0  30px 0;
+    /* align-content: center; */
+    /* justify-content: space-between; */
+    }
+
+.bilder_gal div {
+    width: 24vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 230px;
+    width: 340px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+/* - Media Query */
+
+@media screen and (max-width: 800px) {
+       .navigation {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    nav {
+        padding: 20px 10vw 40px 10vw;
+        position: sticky;
+    }
+
+    article div h2 {
+        font-size: clamp(4rem, 8vw, 6rem);
+    }
+
+    article div p {
+        font-size: clamp(1.5rem, 1.8vw, 2rem);
+    }
+
+    .product {
+        padding: 15vw 4vw;
+    } 
+
+    .para article {
+        padding: 15vh 0;
+    }
+
+    .limit {
+        padding: 0 3vh 0 3vh;
+    }
+    .berge {
+        padding: 90px 6vw 0 6vw;
+    }
+   
+
+}
+
+    
+
+
+@media screen and (max-width: 550px) {
+    nav {
+        padding: 35px 10vw;
+    }
+
+    article div.buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    section.s_header {
+        padding-top: 60px;
+        height: 80vh;
+    }
+
+    .product {
+        flex-direction: column;
+        padding: 8vw 0vw;
+    }
+
+    .product img, .product div {
+        width: 90%;
+    }
+
+    .para {
+        padding: 0 3vw;
+    }
+
+    .limit {
+        padding: 0;
+    }
+    .berge {
+        padding: 90px 3vw 0 3vw;
+    }
+   
+
+}
