@@ -158,7 +158,8 @@ a.white:hover {
     margin: auto;
 }
 
-.product img, .product div {
+.product img,
+.product div {
     width: 50%;
 }
 
@@ -180,13 +181,13 @@ a.white:hover {
 }
 
 .grau {
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
 }
 
 /* ! Parallax */
 
 .para {
-    background: url("../img/parallax.jpeg") no-repeat center /cover;
+    background: url("../img/parallax.jpeg") no-repeat center / cover;
 
     display: flex;
     justify-content: center;
@@ -223,6 +224,7 @@ a.white:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* background-color: aquamarine; */
 }
 
 .limit h4 {
@@ -241,82 +243,82 @@ a.white:hover {
 .berge img {
     object-fit: cover;
     display: block;
-    
 }
 
 /* ! Gallerie */
 
 .gallery {
-    background-color: #0E1015;
+    background-color: #0e1015;
     color: white;
-    
+
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
 
     padding: 60px 0;
+    /* margin-top: -10px; */
 }
 
 .gallery_t h4 {
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .gallery_t p {
     margin-bottom: 15px;
+    text-align: center;
 }
 
-.bild_15{
+.bild_15 {
     background-image: url("../img/gallery_1.png");
 }
 
-.bild_14{
+.bild_14 {
     background-image: url("../img/gallery_2.png");
 }
 
-.bild_13{
+.bild_13 {
     background-image: url("../img/gallery_3.png");
 }
 
-.bild_12{
+.bild_12 {
     background-image: url("../img/gallery_4.png");
 }
 
-.bild_11{
+.bild_11 {
     background-image: url("../img/gallery_5.png");
 }
 
-.bild_10{
+.bild_10 {
     background-image: url("../img/gallery_6.png");
 }
 
-.bild_9{
+.bild_9 {
     background-image: url("../img/gallery_7.png");
 }
 
-.bild_8{
+.bild_8 {
     background-image: url("../img/gallery_8.png");
 }
 
-.bild_7{
+.bild_7 {
     background-image: url("../img/gallery_9.png");
 }
 
-.bild_6{
+.bild_6 {
     background-image: url("../img/gallery_10.png");
 }
 
 .bilder_gal {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-
-    }
+    /* width: 100%; */
+}
 
 .bilder_gal div {
     width: 25%;
     margin-bottom: 40px;
-    height: 230px;
- 
+    min-height: 280px;
 
     background-size: cover;
     background-repeat: no-repeat;
@@ -325,14 +327,102 @@ a.white:hover {
     justify-content: center;
     align-items: center;
 
+    color: rgba(255, 255, 255, 0);
 }
 
+.bilder_gal p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.bilder_gal div:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 20px black;
+}
+
+
+/* ! Parallax 2*/
+
+.para_2 {
+    background: url("../img//3ea97c06a59aee0841f40b4f73eee4b8.jpeg") no-repeat center / cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 0 25vw;
+
+    color: white;
+
+    background-attachment: fixed;
+}
+
+.para_2 article {
+    padding: 5vh 0;
+}
+
+.para_2 div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.para_2 h4 {
+    margin-bottom: 45px;
+}
+
+.para_2 img {
+    margin-bottom: 15px;
+}
+
+.para_2 .bigger {
+    font-weight:bold ;
+}
+
+
+
+/* ! Clients */
+
+.clients {
+    /* background-color: chartreuse; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px 10vw;
+}
+
+
+
+.clients article{
+    /* background-color: aqua; */
+    min-width: 60vw;
+}
+
+.clients div {
+    /* background-color: #745cf9; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.clients h4 {
+    margin-bottom: 45px;
+}
+
+.clients img {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+}
 
 
 /* - Media Query */
 
 @media screen and (max-width: 800px) {
-       .navigation {
+    .navigation {
         display: none;
     }
 
@@ -355,7 +445,7 @@ a.white:hover {
 
     .product {
         padding: 15vw 4vw;
-    } 
+    }
 
     .para article {
         padding: 15vh 0;
@@ -367,12 +457,40 @@ a.white:hover {
     .berge {
         padding: 90px 6vw 0 6vw;
     }
-   
+
+    .gallery {
+        padding: 60px 0 0 0;
+    }
+
+    .bilder_gal div {
+        width: 50%;
+        margin-bottom: 120px;
+    }
+
+    .bilder_gal div {
+        color: rgb(255, 255, 255);
+    }
+    
+    .bilder_gal p {
+        font-size: 20px;
+    }
+    
+    /* # Hier nochmal nachfragen wegen dem Hover!!! */
+    .bilder_gal div:hover {
+        visibility: hidden;
+    }
+
+
+    .clients {
+        padding: 80px 3vw;
+    }
+        
+    .clients article{
+        min-width: 80vw;
+    }
+
 
 }
-
-    
-
 
 @media screen and (max-width: 550px) {
     nav {
@@ -395,7 +513,8 @@ a.white:hover {
         padding: 8vw 0vw;
     }
 
-    .product img, .product div {
+    .product img,
+    .product div {
         width: 90%;
     }
 
@@ -409,6 +528,65 @@ a.white:hover {
     .berge {
         padding: 90px 3vw 0 3vw;
     }
-   
+
+    .gallery {
+        padding: 80px 0;
+    }
+
+    .bilder_gal {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .bilder_gal div {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    div.bild_10 {
+        display: none;
+    }
+
+    div.bild_9 {
+        display: none;
+    }
+
+    div.bild_8 {
+        display: none;
+    }
+
+    div.bild_7 {
+        display: none;
+    }
+
+    div.bild_6 {
+        display: none;
+    }
+
+    .para_2 {
+        padding: 0 3vw;
+    }
+
+    .para_2 h4 {
+        font-size: 24px;
+        margin-bottom: 45px;
+    }
+
+    .para_2 p {
+        font-size: 12px;
+    }
+
+    .clients article{
+        min-width: 50vw;
+    }
+
+    .clients img:nth-of-type(3) {
+        display: none
+    }
+
+    .clients img:nth-of-type(4) {
+        display: none
+    }
 
 }
