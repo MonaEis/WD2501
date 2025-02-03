@@ -1,0 +1,72 @@
+.parent_1 {
+    max-height: 60vh;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+section div {
+    min-height: 5vh;
+    border-radius: 5px;
+}
+
+section .red {
+    background-color: red;
+    grid-column: 1/-1;
+}
+
+section .blue {
+    background-color: blue;
+    grid-column: 1/span 2;
+    grid-row: 2 / span 2;
+}
+
+section .green {
+    background-color: green;
+    grid-column: 3/ span 2;
+}
+
+section .violet {
+    background-color: rgb(90, 7, 90);
+}
+
+hr {
+    margin: 20px 0;
+}
+
+.parent_2 {
+    max-height: 60vh;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+section .orange {
+    background-color: rgb(255, 157, 0);
+    grid-column: 1 / span 2;
+}
+
+section .aqua {
+    background-color: aqua;
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 2;
+
+}
+
+section .flieder {
+    background-color: rgb(216, 102, 216);
+    grid-row: 2 / span 2;
+}
+
+section .teal {
+    background-color: teal;
+}
+
+section .grey {
+    background-color: gray;
+    grid-column: 3 / span 2;
+}

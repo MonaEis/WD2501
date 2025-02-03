@@ -1,0 +1,174 @@
+@font-face {
+    font-family: "Cormorant_B";
+    src: url(../font/Cormorant_Garamond/CormorantGaramond-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Cormorant_Reg";
+    src: url(../font/Cormorant_Garamond/CormorantGaramond-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Cormorant_RegIt";
+    src: url(../font/Cormorant_Garamond/CormorantGaramond-Italic.ttf);
+}
+
+
+/* ! Basis */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    color: var(--prime_color);
+    font-size: 10px;
+}
+
+:root {
+    --prime_color: #333333;
+    --fs_16: 1.6rem;
+    --fs_24: 2.4rem;
+    --fs_35: 3.5rem;
+    --mb_20: 2rem;
+    --ff_bold: "Cormorant_B";
+    --ff_reg: "Cormorant_Reg";
+    --ff_it: "Cormorant_RegIt"
+}
+
+img {
+    max-width: 100%;
+}
+
+
+.wrapper {
+    background-color: #E9E9E0;
+    padding: 15px 3vw 20px 3vw;
+}
+
+p {
+    font-family: var(--ff_reg);
+    font-size: var(--fs_16);
+}
+
+h3 {
+    font-size: var(--fs_24);
+    font-weight: 500;
+}
+
+/* ! Header */
+
+header {
+    text-align: center;
+    margin-bottom: var(--mb_20);
+}
+
+header h1 {
+    font-family: var(--ff_bold);
+    font-size: 45px;
+    text-transform: uppercase;
+    margin-bottom: var(--mb_20);
+    
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10vw 5px 10vw;
+    border-bottom: #333333 4px solid;
+    border-top: #333333 4px solid;
+}
+
+header p {
+    text-transform: uppercase;
+}
+
+/* ! Main */
+
+
+main {
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: 5fr 1fr;
+    column-gap: 20px;
+}
+
+/* - links */
+
+main .links {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+.links .headline {
+    grid-column: 1/-1;
+    text-align: center;
+}
+
+.links .headline h2 {
+    font-family: var(--ff_bold);
+    font-size: var(--fs_35);
+}
+
+.links .a_3 {
+    grid-column:1/span 1 ;
+}
+
+.links .a_5 {
+    grid-column: 1 / span 1;
+}
+
+.links .bild {
+    grid-column: 3 / span 2;
+    grid-row: 2 / span 3;
+}
+
+.links .bild p {
+    font-family: var(--ff_it);
+}
+
+/* - rechts */
+
+.rechts div {
+    margin-bottom: var(--mb_20);
+    border: solid var(--prime_color) 4px;
+    padding: 20px;
+
+
+}
+.rechts h5 {
+    font-size: 19px;
+    font-family: var(--ff_bold);
+    text-align: center;
+    margin-bottom: var(--mb_20);
+}
+
+.rechts h4 {
+    font-family: var(--ff_bold);
+    font-size: 50px;
+    text-align: center;
+
+}
+
+.knive {
+    text-align: center;
+}
+
+.knive h3 {
+    margin-bottom: var(--mb_20);
+}
+
+.knive p {
+    margin-bottom: var(--mb_20);
+}
+
+.knive a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #737B80;
+    border-bottom: 1px solid;
+}
