@@ -1,0 +1,391 @@
+@font-face {
+    font-family: "Inter";
+    src: url("../font/Inter/Inter-VariableFont_opsz\,wght.ttf");
+}
+
+@font-face {
+    font-family: "Lora";
+    src: url("../font/Lora/Lora-VariableFont_wght.ttf");
+}
+
+/* ! Basics */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: "Inter"
+}
+
+:root {
+    --fs14: 1.4rem;
+    --fs20: 2rem;
+    --fs28: 2.8rem;
+    --fs85: 8.5rem;
+    --fs96: 9.6rem;
+    --c-wh: white;
+    --c-bl: black;
+    --p_lr: 6vw;
+}
+
+body {
+    /* overflow: hidden; */
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    /* padding: 0 6vw 0 6vw; */
+     overflow: hidden;
+}
+
+.bb_wf {
+    background-color: var(--c-bl);
+    color: var(--c-wh);
+}
+
+.wb_bf {
+    background-color: var(--c-wh);
+    color: var(--c-bl);
+}
+
+a {
+    text-decoration: none;
+    color: var(--c-wh);
+    font-size: var(--fs20);
+    border: 1px solid var(--c-wh);
+    padding: 10px 30px;
+
+    transition: all 0.5s 0s ease-in-out;
+}
+
+a:hover {
+    color: var(--c-bl);
+    background-color: var(--c-wh);
+    border: 1px solid var(--c-wh);
+}
+
+h3 {
+    font-size: var(--fs85);
+}
+
+
+
+
+/* ! Header */
+
+header {
+    padding: 0 var(--p_lr) 40px var(--p_lr);
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header article {
+    text-align: center;
+    margin-bottom: 20vh;
+}
+
+header article img{
+    height: 186px;
+    width: 100%;
+    margin-bottom: 30px;
+} 
+
+header article p {
+    font-size: var(--fs20);
+    margin-bottom: 15px;
+}
+
+header article p {
+    font-size: var(--fs20);
+}
+
+header article h1 {
+    font-size: var(--fs96);
+    margin-bottom: -35px;
+}
+
+header article h2 {
+    font-size: var(--fs96);
+
+/* # Hier Frage wegen der Outline!!  */
+  /* -webkit-text-fill-color: black; 
+  -webkit-text-stroke: 2px white; */
+  color: rgb(0, 0, 0);
+  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+
+  margin-bottom: 15px;
+}
+
+header nav {
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+nav img {
+    height: 25px;
+}
+
+/* ! Main */
+
+/* ! Section Facts */
+
+.facts {
+    padding: 120px 0 100px 6vw;
+}
+
+.facts h3 {
+    max-width: 900px;
+}
+
+.facts article {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.facts .facts_1 {
+    grid-columns: 1 / span 1;
+    grid-row: 2 / span 1;
+}
+
+.facts .facts_2 {
+    grid-columns: 1 / span 1;
+    grid-row: 3 / span 1;
+}
+
+.facts .facts_3 {
+    grid-columns: 1 / span 1;
+    grid-row: 4 / span 1;
+}
+
+.facts .facts_img {
+    grid-columns: 2 / span 1;
+    grid-row: 1 / span 4;
+}
+
+.facts p {
+    font-size: var(--fs14);
+    margin-bottom: 10px;
+}
+.facts h3 {
+    margin-bottom: 20px;
+}
+
+
+/* ! Section Stuck */
+
+.stuck {
+    height: 600px;
+}
+
+
+/* ! Section Golden */
+
+.golden {
+    padding: 160px 6vw 0 6vw;
+}
+
+.text_neben .oben {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 30px;
+}
+
+.oben p {
+    font-size: var(--fs20);
+    line-height: 0;
+}
+
+.oben p:nth-of-type(1) {
+    margin-bottom: 20px;
+}
+
+.oben h3 {
+    max-width: 290px;
+    line-height: 8rem;
+}
+
+.oben h4 {
+    font-size: var(--fs28);
+    max-width: 510px;
+    margin-bottom: 30px;
+}
+
+.oben div:nth-of-type(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.unten {
+    display: flex;
+    position: relative;
+    top: 200px;
+}
+
+.bear_zeichnung {
+    max-width: 800px;
+}
+
+.bear_buttons {
+    max-width: 400px;
+}
+
+.bear_buttons img {
+    position: relative;
+    top: 160px;
+    right: 80px;
+    z-index: 1;
+}
+
+
+/* ! Circle */
+
+.circle {
+    display: flex;
+    justify-content: end;
+    
+}
+
+.circle img {
+    max-width: 400px;
+    position: relative;
+    bottom: 100px;
+    left: 120px;
+
+    /* # Frage: wie kommt das Element hinter das Bild? */
+
+    animation: Drehen 5s linear infinite normal 0.1s
+}
+
+@keyframes Drehen {
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+ }
+
+
+
+/* ! Section Poppy */
+
+.poppy {
+    padding: 40px 6vw 0 6vw;
+}
+
+.bear_blumen {
+    max-width: 800px;
+}
+
+.bear_poster {
+    max-width: 400px;
+}
+
+.bear_poster img {
+    position: relative;
+    top: 160px;
+    left: 80px
+}
+
+.filler {
+    height: 250px;
+}
+
+/* ! Footer */
+
+footer {
+    overflow: hidden;
+}
+
+footer section {
+    padding: 40px 6vw 40px 6vw;
+}
+
+.animation_june {
+    position: relative;
+    top: 800px;
+    left: 50px;
+    width: 4000px;
+    font-size: 80px;
+    font-family: "Lora";
+    font-weight: 700;
+    color: var(--c-bl);
+    background-color: var(--c-wh);
+
+    animation: Ticker 20s ease-in-out infinite alternate 0.1s;
+}
+
+.animation_june span {
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+@keyframes Ticker {
+    0%, 100% {
+        transform: rotate(30deg) translateX(-2400px);
+    }
+
+    50% {
+        transform: rotate(30deg) translateX(150px)
+    }
+    
+ }
+
+
+
+.footer_oben {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 100px;
+}
+
+.footer_oben p {
+    font-size: var(--fs14);
+    margin-bottom: 15px;
+}   
+
+.footer_oben h4 {
+    font-size: var(--fs28);
+    margin-bottom: 30px;
+    max-width: 550px;
+}  
+
+.footer_unten {
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_unten .footer_links img {
+    max-height: 15px;
+    margin-right: 5px;
+}
+
+.footer_links div {
+    margin-bottom: 15px;
+}
+
+.footer_links p{
+    font-size: var(--fs14);
+    margin-bottom: 15px;
+}
+
+.footer_rechts img {
+    max-width: 50px;
+    margin-right: 5px;
+
+}
