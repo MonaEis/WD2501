@@ -8,6 +8,11 @@
     src: url("../font/Lora/Lora-VariableFont_wght.ttf");
 }
 
+@font-face {
+    font-family: "Work_Sans";
+    src: url("../font/Work_Sans/WorkSans-VariableFont_wght.ttf");
+}
+
 /* ! Basics */
 
 * {
@@ -18,13 +23,15 @@
 
 html {
     font-size: 10px;
-    font-family: "Inter"
 }
 
 :root {
     --fs14: 1.4rem;
+    --fs18: 1.8rem;
     --fs20: 2rem;
+    --fs22: 2.2rem;
     --fs28: 2.8rem;
+    --fs65: 6.5rem;
     --fs85: 8.5rem;
     --fs96: 9.6rem;
     --c-wh: white;
@@ -32,17 +39,18 @@ html {
     --p_lr: 6vw;
 }
 
-body {
-    /* overflow: hidden; */
-}
-
 img {
     max-width: 100%;
 }
 
 .wrapper {
-    /* padding: 0 6vw 0 6vw; */
-     overflow: hidden;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2vw;
 }
 
 .bb_wf {
@@ -71,18 +79,27 @@ a:hover {
     border: 1px solid var(--c-wh);
 }
 
+h1,
+h3,
+h4 {
+    font-family: "Inter";
+}
+
 h3 {
     font-size: var(--fs85);
 }
 
-
-
+p,
+h2,
+a {
+    font-family: "Work_Sans";
+}
 
 /* ! Header */
 
 header {
-    padding: 0 var(--p_lr) 40px var(--p_lr);
-    /* height: 100vh; */
+    padding-bottom: 40px;
+    /* height: 50vh; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -90,22 +107,22 @@ header {
 
 header article {
     text-align: center;
-    margin-bottom: 20vh;
+    /* background-color: aqua; */
 }
 
-header article img{
+header article img {
     height: 186px;
     width: 100%;
     margin-bottom: 30px;
-} 
+}
 
 header article p {
     font-size: var(--fs20);
     margin-bottom: 15px;
 }
 
-header article p {
-    font-size: var(--fs20);
+header article p:nth-of-type(2) {
+    margin-bottom: 200px;
 }
 
 header article h1 {
@@ -116,17 +133,16 @@ header article h1 {
 header article h2 {
     font-size: var(--fs96);
 
-/* # Hier Frage wegen der Outline!!  */
-  /* -webkit-text-fill-color: black; 
-  -webkit-text-stroke: 2px white; */
-  color: rgb(0, 0, 0);
-  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+    color: var(--c-bl);
+    text-shadow: -1px -1px 0 var(--c-wh), 1px -1px 0 var(--c-wh),
+        -1px 1px 0 var(--c-wh), 1px 1px 0 var(--c-wh);
 
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 header nav {
     /* background-color: aqua; */
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -141,7 +157,7 @@ nav img {
 /* ! Section Facts */
 
 .facts {
-    padding: 120px 0 100px 6vw;
+    padding: 120px 0 100px 0;
 }
 
 .facts h3 {
@@ -154,22 +170,22 @@ nav img {
 }
 
 .facts .facts_1 {
-    grid-columns: 1 / span 1;
+    grid-column: 1 / span 1;
     grid-row: 2 / span 1;
 }
 
 .facts .facts_2 {
-    grid-columns: 1 / span 1;
+    grid-column: 1 / span 1;
     grid-row: 3 / span 1;
 }
 
 .facts .facts_3 {
-    grid-columns: 1 / span 1;
+    grid-column: 1 / span 1;
     grid-row: 4 / span 1;
 }
 
 .facts .facts_img {
-    grid-columns: 2 / span 1;
+    grid-column: 2 / span 1;
     grid-row: 1 / span 4;
 }
 
@@ -181,21 +197,94 @@ nav img {
     margin-bottom: 20px;
 }
 
-
 /* ! Section Stuck */
 
 .stuck {
-    height: 600px;
+    padding: 400px 0 310px 0;
+    position: relative;
 }
 
+.stuck article {
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stuck h3 {
+    /* background-color: aqua; */
+    line-height: 8rem;
+    margin-bottom: 15px;
+    width: 450px;
+}
+
+.stuck p {
+    font-size: var(--fs14);
+    line-height: 3rem;
+    margin-bottom: 15px;
+    width: 390px;
+}
+
+.stuck p:nth-of-type(1) {
+    margin-bottom: 700px;
+}
+
+.bw_img_1 {
+    width: 330px;
+    position: absolute;
+    top: -50px;
+    right: 110px;
+}
+
+.bw_img_2 {
+    width: 275px;
+    position: absolute;
+    top: 280px;
+    left: 55px;
+}
+
+.bw_img_3 {
+    width: 275px;
+    position: absolute;
+    top: 670px;
+    right: 0px;
+}
+
+.bw_img_4 {
+    width: 330px;
+    position: absolute;
+    top: 875px;
+    left: 220px;
+}
+
+.bw_img_5 {
+    width: 330px;
+    position: absolute;
+    top: 1060px;
+    right: 165px;
+}
+
+.bw_img_6 {
+    width: 275px;
+    position: absolute;
+    top: 1360px;
+    left: 0;
+}
+
+.bw_img_7 {
+    width: 440px;
+    position: absolute;
+    bottom: -50px;
+    right: 275px;
+}
 
 /* ! Section Golden */
 
 .golden {
-    padding: 160px 6vw 0 6vw;
+    padding-top: 160px;
 }
 
-.text_neben .oben {
+.oben {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 30px;
@@ -203,7 +292,6 @@ nav img {
 
 .oben p {
     font-size: var(--fs20);
-    line-height: 0;
 }
 
 .oben p:nth-of-type(1) {
@@ -221,7 +309,7 @@ nav img {
     margin-bottom: 30px;
 }
 
-.oben div:nth-of-type(2){
+.oben div:nth-of-type(2) {
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -229,79 +317,70 @@ nav img {
 
 .unten {
     display: flex;
-    position: relative;
-    top: 200px;
 }
 
-.bear_zeichnung {
+.bear_zeichnung img {
+    position: relative;
+    top: 200px;
     max-width: 800px;
 }
 
-.bear_buttons {
-    max-width: 400px;
-}
-
 .bear_buttons img {
+    max-width: 400px;
     position: relative;
-    top: 160px;
+    top: 360px;
     right: 80px;
     z-index: 1;
 }
-
 
 /* ! Circle */
 
 .circle {
     display: flex;
     justify-content: end;
-    
 }
 
 .circle img {
     max-width: 400px;
     position: relative;
     bottom: 100px;
-    left: 120px;
+    right: -120px;
 
-    /* # Frage: wie kommt das Element hinter das Bild? */
-
-    animation: Drehen 5s linear infinite normal 0.1s
+    animation: Drehen 5s linear infinite normal 0.1s;
 }
 
 @keyframes Drehen {
-    from{
+    from {
         transform: rotate(0deg);
     }
 
-    to{
+    to {
         transform: rotate(360deg);
     }
- }
-
-
+}
 
 /* ! Section Poppy */
 
 .poppy {
-    padding: 40px 6vw 0 6vw;
+    padding-top: 40px;
 }
 
-.bear_blumen {
+.bear_blumen img {
+    position: relative;
+    top: 200px;
     max-width: 800px;
 }
 
-.bear_poster {
-    max-width: 400px;
-}
-
 .bear_poster img {
+    max-width: 400px;
     position: relative;
-    top: 160px;
-    left: 80px
+    top: 360px;
+    left: 80px;
+    z-index: 1;
 }
 
 .filler {
-    height: 250px;
+    height: 210px;
 }
 
 /* ! Footer */
@@ -311,7 +390,7 @@ footer {
 }
 
 footer section {
-    padding: 40px 6vw 40px 6vw;
+    padding: 40px 0;
 }
 
 .animation_june {
@@ -319,7 +398,7 @@ footer section {
     top: 800px;
     left: 50px;
     width: 4000px;
-    font-size: 80px;
+    font-size: 8rem;
     font-family: "Lora";
     font-weight: 700;
     color: var(--c-bl);
@@ -330,38 +409,32 @@ footer section {
 
 .animation_june span {
     color: white;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+        1px 1px 0 #000;
 }
 
 @keyframes Ticker {
-    0%, 100% {
+    0%,
+    100% {
         transform: rotate(30deg) translateX(-2400px);
     }
 
     50% {
-        transform: rotate(30deg) translateX(150px)
+        transform: rotate(30deg) translateX(150px);
     }
-    
- }
-
-
-
-.footer_oben {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-bottom: 100px;
 }
 
 .footer_oben p {
     font-size: var(--fs14);
     margin-bottom: 15px;
-}   
+}
 
 .footer_oben h4 {
     font-size: var(--fs28);
     margin-bottom: 30px;
     max-width: 550px;
-}  
+    line-height: 4.5rem;
+}
 
 .footer_unten {
     /* background-color: blueviolet; */
@@ -379,7 +452,7 @@ footer section {
     margin-bottom: 15px;
 }
 
-.footer_links p{
+.footer_links p {
     font-size: var(--fs14);
     margin-bottom: 15px;
 }
@@ -387,5 +460,448 @@ footer section {
 .footer_rechts img {
     max-width: 50px;
     margin-right: 5px;
+}
+
+/* # Media Queries */
+
+@media screen and (max-width: 800px) {
+    /* ! Basics */
+
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 2vw;
+    }
+
+    a {
+        font-size: var(--fs18);
+    }
+
+    h3 {
+        font-size: var(--fs65);
+    }
+
+    /* ! Header */
+
+    header article p:nth-of-type(2) {
+        margin-bottom: 200px;
+    }
+
+    /* ! Main */
+
+    /* ! Section Facts */
+
+    .facts {
+        padding: 120px 0 100px 0;
+    }
+
+    .facts h3 {
+        max-width: 580px;
+    }
+
+    .facts article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .facts .facts_1 {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+    }
+
+    .facts .facts_2 {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    .facts .facts_3 {
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+    }
+
+    .facts .facts_img {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 3;
+    }
+
+    .facts p {
+        font-size: var(--fs12);
+        margin-bottom: 8px;
+    }
+
+    /* ! Section Stuck */
+
+    .stuck {
+        padding: 300px 0 310px 0;
+        position: relative;
+    }
+
+    .stuck h3 {
+        line-height: 6rem;
+        margin-bottom: 10px;
+        width: 350px;
+    }
+
+    .stuck p {
+        font-size: var(--fs12);
+        line-height: 2.5rem;
+        width: 300px;
+    }
+
+    .stuck p:nth-of-type(1) {
+        margin-bottom: 500px;
+    }
+
+    .bw_img_1 {
+        width: 270px;
+        position: absolute;
+        top: -50px;
+        right: 110px;
+    }
+
+    .bw_img_2 {
+        display: none;
+    }
+
+    .bw_img_3 {
+        width: 225px;
+        position: absolute;
+        top: 550px;
+        right: 0px;
+    }
+
+    .bw_img_4 {
+        width: 270px;
+        position: absolute;
+        top: 755px;
+        left: 120px;
+    }
+
+    .bw_img_5 {
+        display: none;
+    }
+
+    .bw_img_6 {
+        width: 225px;
+        position: absolute;
+        top: 1200px;
+        left: 0;
+    }
+
+    .bw_img_7 {
+        width: 295px;
+        position: absolute;
+        bottom: -50px;
+        right: 5px;
+    }
+
+    /* ! Section Golden */
+
+    .golden {
+        padding-top: 120px;
+    }
+
+    .oben p {
+        font-size: var(--fs14);
+    }
+
+    .oben p:nth-of-type(1) {
+        margin-bottom: 10px;
+    }
+
+    .oben h3 {
+        line-height: 7rem;
+    }
+
+    .oben h4 {
+        font-size: var(--fs20);
+        margin-bottom: 20px;
+    }
+
+    .unten {
+        display: flex;
+    }
+
+    .bear_zeichnung img {
+        position: relative;
+        top: 100px;
+        max-width: 500px;
+    }
+
+    .bear_buttons img {
+        max-width: 225px;
+        position: relative;
+        top: 250px;
+        right: 100px;
+        z-index: 1;
+    }
+
+    /* ! Circle */
+
+    .circle img {
+        max-width: 300px;
+        position: relative;
+        bottom: 50px;
+        right: -250px;
+
+        animation: Drehen 5s linear infinite normal 0.1s;
+    }
+
+    /* ! Section Poppy */
+
+    .poppy {
+        padding-top: 10px;
+    }
+
+    .bear_blumen img {
+        top: 100px;
+        right: 150px;
+        max-width: 500px;
+    }
+
+    .bear_poster img {
+        max-width: 225px;
+        left: 0;
+        top: 250px;
+    }
+
+    .filler {
+        height: 110px;
+    }
+
+    /* ! Footer */
+
+    footer section {
+        padding: 90px 0 40px 0;
+    }
+
+    .animation_june {
+        top: 900px;
+        left: -360px;
+        font-size: 7rem;
+    }
+
+    @keyframes Ticker {
+        0%,
+        100% {
+            transform: rotate(35deg) translateX(-2400px);
+        }
+
+        50% {
+            transform: rotate(35deg) translateX(150px);
+        }
+    }
+
+    .footer_oben p {
+        font-size: var(--fs12);
+        margin-bottom: 15px;
+    }
+
+    .footer_oben h4 {
+        font-size: var(--fs20);
+        max-width: 400px;
+        line-height: 3rem;
+    }
+
+    .footer_links p {
+        font-size: var(--fs12);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    /* ! Basics */
+
+    .container {
+        max-width: 370px;
+    }
+
+    a {
+        font-size: var(--fs14);
+    }
+
+    h3 {
+        font-size: 4rem;
+    }
+
+    /* ! Header */
+
+    header article p {
+        font-size: var(--fs14);
+        margin-bottom: 15px;
+    }
+
+    header article p:nth-of-type(2) {
+        margin-bottom: 100px;
+    }
+
+    header article h1 {
+        font-size: 5.8rem;
+        margin-bottom: -25px;
+    }
+
+    header article h2 {
+        font-size: 5.8rem;
+
+        color: var(--c-bl);
+        text-shadow: -1px -1px 0 var(--c-wh), 1px -1px 0 var(--c-wh),
+            -1px 1px 0 var(--c-wh), 1px 1px 0 var(--c-wh);
+    }
+
+    /* ! Main */
+
+    /* ! Section Facts */
+
+    .facts {
+        padding: 90px 0 100px 0;
+    }
+
+    .facts h3 {
+        margin-bottom: 30px;
+    }
+
+    /* ! Section Stuck */
+
+    .stuck {
+        padding: 170px 0 170px 0;
+    }
+
+    .stuck h3 {
+        line-height: 4rem;
+        width: 210px;
+    }
+
+    .stuck p {
+        line-height: 2.5rem;
+        width: 250px;
+    }
+
+    .stuck p:nth-of-type(1) {
+        margin-bottom: 260px;
+    }
+
+    .bw_img_1 {
+        top: -50px;
+        right: 40px;
+    }
+
+    .bw_img_3 {
+        top: 370px;
+        right: 0px;
+    }
+
+    .bw_img_4 {
+        width: 230px;
+        top: 435px;
+        left: 0px;
+    }
+
+    .bw_img_5 {
+        display: none;
+    }
+
+    .bw_img_6 {
+        display: none;
+    }
+
+    .bw_img_7 {
+        width: 265px;
+        position: absolute;
+        bottom: -20px;
+        right: 185px;
+    }
+
+    /* ! Section Golden */
+
+    .golden {
+        padding-top: 80px;
+    }
+
+    .oben {
+        grid-template-columns: 1fr 2fr;
+        column-gap: 20px;
+    }
+
+    .oben p {
+        font-size: var(--fs12);
+    }
+
+    .oben p:nth-of-type(1) {
+        margin-bottom: 5px;
+    }
+
+    .oben h3 {
+        line-height: 4rem;
+    }
+
+    .oben h4 {
+        font-size: var(--fs14);
+        margin-bottom: 10px;
+    }
+
+    .bear_zeichnung img {
+        top: 50px;
+        max-width: 350px;
+    }
+
+    .bear_buttons img {
+        max-width: 175px;
+        top: 150px;
+        right: 130px;
+        z-index: 1;
+    }
+
+    /* ! Circle */
+
+    .circle img {
+        max-width: 260px;
+        bottom: 40px;
+        right: -200px;
+    }
+
+    /* ! Section Poppy */
+
+    .poppy {
+        padding-top: 0px;
+    }
+
+    .bear_blumen img {
+        top: 50px;
+        right: 130px;
+        max-width: 350px;
+    }
+
+    .bear_poster img {
+        max-width: 175px;
+        left: 0;
+        top: 150px;
+    }
+
+    .filler {
+        height: 60px;
+    }
+
+    /* ! Footer */
+
+    footer section {
+        padding: 110px 0 40px 0;
+    }
+
+    .animation_june {
+        top: 900px;
+        left: -560px;
+        font-size: 6rem;
+    }
+
+    @keyframes Ticker {
+        0%,
+        100% {
+            transform: rotate(35deg) translateX(-2000px);
+        }
+
+        50% {
+            transform: rotate(35deg) translateX(150px);
+        }
+    }
 
 }
