@@ -1,0 +1,11 @@
+.font_big {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: blue;
+    font-size: 25px;
+}
+
+.font_small {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(232, 134, 15);
+    font-size: 18px;
+}
